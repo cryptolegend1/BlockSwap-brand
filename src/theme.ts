@@ -27,6 +27,11 @@ const theme = createTheme({
           color: "rgb(16,185,129)",
           textAlign: "center",
         },
+        h5: {
+          fontFamily: "Lcd-Solid,Arial,sans-serif",
+          color: "rgb(16,185,129)",
+          textAlign: "center",
+        },
         body2: {
           fontSize: "16px",
           fontWeight: 600,
