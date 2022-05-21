@@ -24,6 +24,7 @@ export default function Home() {
   const handleTabChange = (event: any, newValue: number) => {
     const views = ["all", "mytickers", "battle"];
     getTickers(views[newValue]);
+    setPage(1);
     setView(newValue);
   };
   const getTickers = async (view: string) => {
