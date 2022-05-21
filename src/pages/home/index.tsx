@@ -16,7 +16,7 @@ export default function Home() {
   const [page, setPage] = useState(1);
   const [view, setView] = useState(0);
   const [isLoading, setLoading] = useState(false);
-  const { active, activate } = useWeb3React();
+  const { active, activate, account } = useWeb3React();
 
   const handlePageChange = (event: any, value: number) => {
     setPage(value);
@@ -27,14 +27,14 @@ export default function Home() {
     setView(newValue);
   };
   const getTickers = async (view: string) => {
-    const query = tickerQuery(view, "");
+    setLoading(true);
+    const query = tickerQuery(view, account);
     const res = await api.getTickers(query);
     setTickers(res.tickers);
     setLoading(false);
   };
 
   useEffect(() => {
-    setLoading(true);
     getTickers("all");
   }, []);
 
