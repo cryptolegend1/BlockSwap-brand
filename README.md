@@ -20,6 +20,7 @@ It gets nft ID from nft name by calling `lowerTickerToTokenId()` method and also
 - web3-react
 - ether.js
 - GraphQL
+- axios
 - Vercel
 
 ### Prerequisites
@@ -40,3 +41,9 @@ yarn start
 
 - `start`: start local development app
 - `build`: build react project
+
+### CI/CD
+
+```
+This project is deployed on the vercel server.
+```
