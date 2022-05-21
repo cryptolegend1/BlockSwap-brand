@@ -5,7 +5,8 @@
 This is the simple NFT dashboard.
 It gets all ticker(NFT)s from subgraph API by using graphQL. There are 3 tabs (Currently `Battle Space` tab is disabled).
 Every NFT has received bid count, the highest bid price, end blocknumber, the address of winner.
-It gets nft ID from nft name by calling `lowerTickerToTokenId()` method and also gets image URI by calling `tokenURI()` method.
+It gets nft ID from nft name by calling `lowerTickerToTokenId()` method and also gets image URI from token Id by calling `tokenURI()` method.
+Finally, nft images are gotten from `pinata` cloud by using token URI.
 
 - `Show All`: This tab shows all NFTs on the network
 - `My Tickers`: This tab show only the NFTs that are created by the user account.
